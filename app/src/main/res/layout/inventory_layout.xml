@@ -15,22 +15,26 @@
         android:gravity="start"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView4"
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:text="INVENTORY"
-            android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INVENTORY"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button" />
+            <Button
+                android:layout_marginTop="151dp"
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView"
+                android:text="CHECK" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView"
-            android:layout_marginTop="151dp"
-
-            android:text="CHECK" />
 
         <LinearLayout
             android:layout_width="wrap_content"

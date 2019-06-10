@@ -90,10 +90,13 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject channel = (JSONObject) new JSONTokener(response).nextValue();
                 Log.v("test",channel.toString());
                 JSONArray feeds=new JSONArray(channel.getString("feeds"));
+                for (int i=0;i<feeds.length();i++){
+                    Log.d("Feeds",feeds.getString(i));
+                }
                 Log.v("test",feeds.toString());
                // JSONObject feed1=feeds.get(0);
-               t1.setText((feeds.getJSONObject(0)).getString("field1"));
-                t2.setText((feeds.getJSONObject(1)).getString("field1"));
+               t1.setText((feeds.getJSONObject(1)).getString("field1"));
+                t2.setText((feeds.getJSONObject(1)).getString("field2"));
             } catch (JSONException e) {
                 e.printStackTrace();
             }
